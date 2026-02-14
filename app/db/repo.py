@@ -12,8 +12,6 @@ def ensure_conversation(db: Session, conversation_id: uuid.UUID) -> Conversation
     if conversation is None:
         conversation = Conversation(conversation_id=conversation_id)
         db.add(conversation)
-        db.commit()
-        db.refresh(conversation)
     return conversation
 
 def append_message(
@@ -49,3 +47,35 @@ def get_transcript(db:Session, conversation_id: uuid.UUID) -> Sequence[Conversat
         .order_by(ConversationMessage.created_at.asc())
     )
     return db.execute(stmt).scalars().all()
+
+def get_transcript_messages(db: Session, conversation_id: uuid.UUID) -> list[ConversationMessage]:
+    return list(get_transcript(db, conversation_id))
+
+def add_message(
+    db: Session,
+    conversation_id: uuid.UUID,
+    role: str,
+    content: str,
+    *,
+    tool_name: Optional[str] = None,
+    trace: Optional[dict] = None,
+    ref_request_id: Optional[uuid.UUID] = None,
+    ref_case_id: Optional[uuid.UUID] = None,
+) -> ConversationMessage:
+    msg = ConversationMessage(
+        conversation_id=conversation_id,
+        role=role,
+        content=content,
+        tool_name=tool_name,
+        trace=trace,
+        ref_request_id=ref_request_id,
+        ref_case_id=ref_case_id,
+    )
+    db.add(msg)
+    return msg
+
+
+def commit_and_refresh(db: Session, *objs) -> None:
+    db.commit()
+    for obj in objs:
+        db.refresh(obj)
