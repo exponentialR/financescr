@@ -1,0 +1,19 @@
+# OS
+.DS_Store
+**/.DS_Store
+
+# Env / secrets
+.env
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# IDEs
+.idea/
+.vscode/
+
+# Local data packs (must live outside repo)
+data/
+*.zip
