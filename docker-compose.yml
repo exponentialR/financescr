@@ -17,8 +17,7 @@ services:
   api:
     build: .
     environment:
-      DATABASE_URL: postgresql://financescr:financescr@db:5432/financescr
-      VERSION_STAMP: financescr@0.1.0
+      DATABASE_URL: postgresql+psycopg://financescr:financescr@db:5432/financescr
     ports:
       - "8000:8000"
     depends_on:
