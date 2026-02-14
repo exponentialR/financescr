@@ -35,7 +35,7 @@ class ConversationMessage(Base):
     role: Mapped[str] = mapped_column(String(16), nullable=False) # for User | Assistant | Tool
     content: Mapped[str] = mapped_column(Text, nullable=False)
     tool_name: Mapped[Optional[str]] = mapped_column(String(64), nullable=True)
-    trace_json: Mapped[Optional[dict]] = mapped_column("trace", JSONB, default=dict, nullable=True)
+    trace: Mapped[Optional[dict]] = mapped_column("trace", JSONB, default=dict, nullable=True)
     ref_request_id: Mapped[Optional[uuid.UUID]] = mapped_column(UUID(as_uuid=True), nullable=True)
     ref_case_id: Mapped[Optional[uuid.UUID]] = mapped_column(UUID(as_uuid=True), nullable=True)
     conversation: Mapped["Conversation"] = relationship(back_populates="messages")
