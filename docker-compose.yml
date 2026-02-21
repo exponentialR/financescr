@@ -18,6 +18,12 @@ services:
     build: .
     environment:
       DATABASE_URL: postgresql+psycopg://financescr:financescr@db:5432/financescr
+      VERSION_STAMP: financescr@0.1.0
+      DATA_ROOT: /data
+      FINCRIME_POLICY_PATH: /data/fincrime/v1/policy.json
+      CREDIT_POLICY_PATH: /data/credit/v1/policy.json
+    volumes:
+      - ${FINANCESCR_DATA_DIR:-/Users/solua1/financescr_data}:/data:ro
     ports:
       - "8000:8000"
     depends_on:

@@ -12,9 +12,9 @@ from app.db.repo import get_transcript
 
 router = APIRouter()
 
-@router.get("/health")
-def health():
-    return {"status": "ok"}
+# @router.get("/health")
+# def health():
+#     return {"status": "ok"}
 
 @router.post("/agent/chat", response_model=AgentChatResponse)
 def agent_chat(req: AgentChatRequest, db: Session = Depends(get_db)):
