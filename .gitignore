@@ -17,3 +17,5 @@ __pycache__/
 # Local data packs (must live outside repo)
 data/
 *.zip
+
+artefacts/
