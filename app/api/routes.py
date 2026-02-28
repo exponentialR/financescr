@@ -5,6 +5,8 @@ from sqlalchemy.orm import Session
 from app.api.schemas import AgentChatRequest, AgentChatResponse
 from app.agent.orchestrator import run_agent_turn
 from app.db.session import get_db
+from app.fincrime.schemas import ScreenRequest, ScreenResponse
+from app.fincrime.service import screen
 
 
 from app.api.schemas import ConversationReplayResponse, TranscriptMessage
@@ -48,3 +50,8 @@ def replay_conversation(conversation_id: str, db: Session = Depends(get_db)):
             for m in msgs
         ],
     }
+
+@router.post("/screen", response_model=ScreenResponse)
+def post_screen(req: ScreenRequest) -> ScreenResponse:
+    """FinCrime screening endpoint (Phase 1 stub; deterministic contract)."""
+    return screen(req)
