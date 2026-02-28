@@ -130,32 +130,40 @@ def name_variants(rng: random.Random, full: str) -> List[str]:
     Deterministic-ish noise variants for retrieval/matching realism.
     """
     parts = full.split()
-    variants = {full}
+    variants: List[str] = []
+    seen = set()
+
+    def add_variant(value: str) -> None:
+        if value not in seen:
+            seen.add(value)
+            variants.append(value)
+
+    add_variant(full)
 
     # drop middle initial if present
     if len(parts) == 3 and len(parts[1]) == 1:
-        variants.add(f"{parts[0]} {parts[2]}")
+        add_variant(f"{parts[0]} {parts[2]}")
 
     # swap order
     if len(parts) >= 2 and maybe(rng, 0.22):
-        variants.add(f"{parts[-1]} {' '.join(parts[:-1])}")
+        add_variant(f"{parts[-1]} {' '.join(parts[:-1])}")
 
     # remove spaces / double spaces
     if maybe(rng, 0.20):
-        variants.add("  ".join(parts))
+        add_variant("  ".join(parts))
     if maybe(rng, 0.18):
-        variants.add(" ".join(parts).replace(" ", ""))
+        add_variant(" ".join(parts).replace(" ", ""))
 
     # hyphenate given names sometimes
     if len(parts) >= 3 and maybe(rng, 0.10):
-        variants.add(f"{parts[0]}-{parts[1]} {parts[2]}")
+        add_variant(f"{parts[0]}-{parts[1]} {parts[2]}")
 
     # apostrophe variations (Irish)
     if "O'" in full and maybe(rng, 0.40):
-        variants.add(full.replace("O'", "O "))
-        variants.add(full.replace("O'", "O"))
+        add_variant(full.replace("O'", "O "))
+        add_variant(full.replace("O'", "O"))
     if "Mc" in full and maybe(rng, 0.25):
-        variants.add(full.replace("Mc", "Mac", 1))
+        add_variant(full.replace("Mc", "Mac", 1))
 
     # lightweight diacritics/ascii-fying (covers some cases)
     replace_map = {
@@ -167,7 +175,7 @@ def name_variants(rng: random.Random, full: str) -> List[str]:
         v = full
         for k, vv in replace_map.items():
             v = v.replace(k, vv)
-        variants.add(v)
+        add_variant(v)
 
     # transliteration-ish variants (light)
     translit_pairs = [
@@ -179,11 +187,10 @@ def name_variants(rng: random.Random, full: str) -> List[str]:
     ]
     for a, b in translit_pairs:
         if a in full and maybe(rng, 0.40):
-            variants.add(full.replace(a, b))
+            add_variant(full.replace(a, b))
 
-    out = list(variants)
-    rng.shuffle(out)
-    return out[: max(4, min(12, len(out)))]
+    rng.shuffle(variants)
+    return variants[: max(4, min(12, len(variants)))]
 
 
 # ----------------------------
