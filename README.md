@@ -291,17 +291,23 @@ These allow derived fields to be explained and recomputed deterministically.
 **Derivation formulas (if raw fields present)**
 
 **Credit utilisation**
-\[
-\text{credit\_utilisation} =
-\text{clip}\left(\frac{\text{revolving\_balance\_gbp}}{\max(\text{revolving\_limit\_gbp}, \epsilon)}, 0, 1\right)
-\]
-with \(\epsilon\) small (e.g. 1.0) to avoid division by zero.
+```text
+credit_utilisation = clip(
+  revolving_balance_gbp / max(revolving_limit_gbp, epsilon),
+  0,
+  1
+)
+```
+where `epsilon` is a small constant (for example `1.0`) to avoid division by zero.
 
 **Bank balance volatility**
-\[
-\text{bank\_balance\_volatility} =
-\text{clip}\left(\frac{\text{balance\_std\_gbp}}{\max(\text{balance\_mean\_gbp}, \epsilon)}, 0, 1\right)
-\]
+```text
+bank_balance_volatility = clip(
+  balance_std_gbp / max(balance_mean_gbp, epsilon),
+  0,
+  1
+)
+```
 Optionally, you can incorporate overdraft days as a separate feature or as a policy guardrail.
 
 **Precedence rule**
@@ -429,4 +435,3 @@ curl -s http://127.0.0.1:8000/agent/conversations/$CID | python -m json.tool
 - No raw secrets/PII in audit logs (no raw ID numbers).
 - Model score is separate from policy decision.
 - Traces and transcripts are persisted for replay.
-
