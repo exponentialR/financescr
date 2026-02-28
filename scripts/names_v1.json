@@ -1,0 +1,54 @@
+{
+  "EU": {
+    "UK": {
+      "first": ["Oliver","George","Harry","Jack","Jacob","Noah","Charlie","Thomas","Oscar","William","James","Henry","Leo","Alfie","Freddie","Archie","Theo","Arthur","Finley","Lucas","Ethan","Alexander","Benjamin","Samuel","Daniel","Joseph","Harrison","Mason","Max","Logan","Amelia","Olivia","Isla","Emily","Ava","Ella","Jessica","Sophie","Grace","Mia","Poppy","Lily","Evie","Ruby","Isabella","Scarlett","Chloe","Daisy","Phoebe","Freya","Charlotte","Hannah","Millie","Lucy","Eleanor","Alice","Matilda","Rosie"],
+      "last": ["Smith","Jones","Taylor","Brown","Williams","Davies","Evans","Wilson","Johnson","Walker","Wright","Robinson","Thompson","White","Hughes","Edwards","Green","Hall","Wood","Moore","Clark","King","Baker","Harris","Cooper","Morris","Cook","Bell","Ward","Watson","Morgan","Bailey","Foster","Reed","Gray","Cox","Price","Parker","Bennett","Scott","Mitchell","James","Campbell","Turner","Phillips","Shaw","Holmes","Rogers","Stevens","Perry"]
+    },
+    "IRISH": {
+      "first": ["Sean","Saoirse","Niamh","Ciaran","Aidan","Eoin","Aoife","Siobhan","Conor","Fiona","Oisin","Darragh","Padraig","Ronan","Caoimhe","Orla","Grainne","Maeve","Deirdre","Brendan","Colm","Cathal","Clodagh","Sinead","Eimear","Aisling","Niall","Keira","Cillian","Fergal"],
+      "last": ["Murphy","Kelly","O'Neill","O'Brien","Walsh","Byrne","Ryan","O'Connor","Doyle","McCarthy","Gallagher","Doherty","Kennedy","Lynch","Murray","Quinn","Moore","Reilly","O'Sullivan","Brennan","Burke","Casey","Fitzgerald","Healy","Kavanagh","McDonnell","Nolan","Power","Sweeney","Duffy"]
+    },
+    "FR": {
+      "first": ["Jean","Pierre","Louis","Antoine","Luc","Hugo","Nicolas","Julien","Mathieu","Thomas","Arthur","Leo","Gabriel","Raphael","Lucas","Paul","Maxime","Alexandre","Camille","Marie","Sophie","Chloe","Manon","Lea","Louise","Julie","Alice","Clara","Sarah","Emma","Ines","Charlotte","Anais","Elise","Margaux","Valentine","Nina","Lucie","Pauline","Amandine"],
+      "last": ["Martin","Bernard","Thomas","Petit","Robert","Richard","Durand","Dubois","Moreau","Laurent","Simon","Michel","Lefevre","Leroy","Roux","David","Bertrand","Morel","Fournier","Girard","Bonnet","Dupont","Lambert","Fontaine","Rousseau","Vincent","Muller","Lefort","Masson","Marchand","Garnier","Faure","Chevalier","Francois","Legrand","Gauthier","Garcia","Perrin","Riviere","Clement"]
+    },
+    "ES": {
+      "first": ["Jose","Juan","Carlos","Miguel","Luis","Javier","Antonio","Francisco","David","Daniel","Alejandro","Sergio","Pablo","Adrian","Alberto","Ruben","Manuel","Rafael","Diego","Mario","Maria","Carmen","Laura","Sofia","Lucia","Paula","Elena","Marta","Andrea","Sara","Isabel","Raquel","Patricia","Natalia","Irene","Alicia","Eva","Claudia","Noelia","Silvia"],
+      "last": ["Garcia","Fernandez","Gonzalez","Rodriguez","Lopez","Martinez","Sanchez","Perez","Gomez","Diaz","Vazquez","Moreno","Jimenez","Hernandez","Ruiz","Alvarez","Romero","Navarro","Torres","Dominguez","Ramos","Gil","Serrano","Blanco","Molina","Morales","Suarez","Ortega","Delgado","Castro","Ortiz","Marin","Rubio","Iglesias","Nunez","Medina","Garrido","Cortes","Santos","Guerrero"]
+    },
+    "PT": {
+      "first": ["Joao","Pedro","Tiago","Andre","Rui","Miguel","Bruno","Goncalo","Diogo","Ricardo","Francisco","Jose","Antonio","Luis","Daniel","Mariana","Ines","Beatriz","Ana","Sofia","Carolina","Joana","Rita","Marta","Catarina","Patricia","Raquel","Daniela","Andreia","Teresa","Filipa","Claudia","Sara","Leonor","Matilde"],
+      "last": ["Silva","Santos","Ferreira","Pereira","Oliveira","Costa","Rodrigues","Martins","Almeida","Gomes","Ribeiro","Carvalho","Lopes","Sousa","Fernandes","Vieira","Monteiro","Cardoso","Rocha","Neves","Correia","Pinto","Dias","Teixeira","Moreira","Mendes","Barbosa","Araujo","Cunha","Moura","Figueiredo","Freitas","Nunes","Coelho","Matos"]
+    },
+    "PL": {
+      "first": ["Jan","Piotr","Pawel","Krzysztof","Michal","Tomasz","Andrzej","Jakub","Mateusz","Marcin","Adam","Karol","Lukasz","Damian","Rafal","Marek","Anna","Katarzyna","Agnieszka","Magdalena","Zofia","Ewa","Maria","Aleksandra","Natalia","Julia","Kinga","Monika","Dorota","Joanna","Barbara"],
+      "last": ["Nowak","Kowalski","Wojcik","Kaczmarek","Zielinski","Szymanski","Dabrowski","Kozlowski","Jankowski","Mazur","Krawczyk","Piotrowski","Grabowski","Pawlak","Michalski","Nowicki","Adamczyk","Dudek","Zajac","Wieczorek","Jablonski","Krupa","Wrobel","Malinowski","Sikora","Gorski","Olszewski","Chmielewski","Wasilewski","Czerwinski","Walczyk"]
+    },
+    "BALTIC": {
+      "first": ["Marius","Tomas","Jonas","Lukas","Aiste","Ruta","Egle","Katrin","Maarja","Kristjan","Martins","Janis","Liga","Karlis","Rihards","Greta","Milda","Ieva","Tarmo","Sander","Kadri"],
+      "last": ["Kazlauskas","Jankauskas","Petrauskas","Vaitkus","Ozols","Berzins","Kalnins","Tamm","Saar","Kask","Pauls","Krumins","Liepa","Zvirbulis","Petersons","Eglitis","Vaher","Koppel","Lepik","Nomm","Tammsaare"]
+    },
+    "RU": {
+      "first": ["Ivan","Dmitry","Sergey","Alexei","Nikolai","Andrei","Vladimir","Mikhail","Pavel","Kirill","Artem","Ilya","Yuri","Oleg","Roman","Olga","Natalia","Irina","Tatiana","Anna","Ekaterina","Svetlana","Marina","Elena","Yulia","Anastasia","Ksenia","Daria"],
+      "last": ["Ivanov","Petrov","Sidorov","Smirnov","Volkov","Sokolov","Popov","Morozov","Kuznetsov","Novikov","Fedorov","Mikhailov","Orlov","Pavlov","Gusev","Medvedev","Nikolaev","Kiselev","Egorov","Belov","Tarasov","Zaitsev","Semenov","Bogdanov","Voronin","Gromov","Kovalev","Lebedev","Soloviev","Makarov"]
+    }
+  },
+  "ASIA": {
+    "AR": {
+      "first": ["Mohammed","Muhammad","Ahmed","Ali","Hassan","Omar","Yusuf","Khalid","Abdullah","Ibrahim","Mustafa","Mahmoud","Saeed","Salim","Hadi","Amir","Bilal","Karim","Nasser","Faisal","Aisha","Fatima","Zainab","Sana","Mariam","Noor","Huda","Layla","Salma","Yasmin"],
+      "last": ["Khan","Hussain","Abdullah","Ibrahim","Al-Sayed","Al-Mansouri","Al-Farsi","Al-Hassan","Al-Nuaimi","Al-Qahtani","Al-Ahmadi","Al-Khalifa","Al-Shammari","Al-Hashimi","Al-Rashid","Al-Zahrani","Al-Ghamdi","Al-Harbi","Al-Mutairi","Al-Dosari","Al-Faraj","Al-Hamadi","Al-Ali","Al-Salem"]
+    },
+    "IN": {
+      "first": ["Arjun","Rahul","Amit","Sanjay","Vikram","Ravi","Karan","Anil","Deepak","Manish","Prakash","Suresh","Naveen","Rohit","Ajay","Priya","Ananya","Neha","Pooja","Asha","Kavya","Divya","Sneha","Riya","Meera","Shreya","Isha","Nidhi"],
+      "last": ["Singh","Kaur","Patel","Sharma","Gupta","Mehta","Iyer","Nair","Reddy","Verma","Jain","Agarwal","Chopra","Malhotra","Bansal","Pandey","Yadav","Thakur","Das","Bose","Kulkarni","Naidu","Menon","Ghosh","Rao","Saxena","Tripathi","Mishra"]
+    },
+    "CN": {
+      "first": ["Wei","Ming","Jia","Li","Chen","Xiao","Hui","Jun","Fang","Mei","Lan","Qiang","Lei","Tao","Yan","Jing","Ying","Bo","Shan","Xiu","Yuan","Dong","Rui","Zhen","Chao"],
+      "last": ["Zhang","Wang","Li","Chen","Liu","Yang","Huang","Zhao","Wu","Zhou","Xu","Sun","Ma","Zhu","Hu","Guo","He","Gao","Lin","Luo","Tang","Deng","Cao","Fan","Jiang"]
+    }
+  },
+  "weights": {
+    "EU": {"UK": 0.30, "IRISH": 0.12, "FR": 0.14, "ES": 0.14, "PT": 0.10, "PL": 0.10, "BALTIC": 0.05, "RU": 0.05},
+    "ASIA": {"AR": 0.45, "IN": 0.35, "CN": 0.20}
+  }
+}
