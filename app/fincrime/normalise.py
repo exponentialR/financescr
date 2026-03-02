@@ -73,7 +73,7 @@ def normalise_text(text: str) -> str:
     t = t.replace("-", " ").replace("'", " ")
     t = _NON_ALNUM_SPACE.sub(" ", t)
     t = _MULTI_SPACE.sub(" ", t)
-    return t
+    return t.strip()
 
 def tokenise(text: str) -> List[str]:
     """
